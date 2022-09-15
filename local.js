@@ -55,20 +55,20 @@ s5();
 //----------------------------------------------------------DATE VALIDATION-----------------------------------------
 
 
-  function ganval3() 
-  {   let element = document.getElementById("dob");
-      const dob = document.getElementById("dob").value;
-      let sri1 = new Date(dob);
-      var todaydate = new Date();
-      var age = parseInt(todaydate.getFullYear()) - parseInt(sri1.getFullYear());
-      if (todaydate.getMonth() < sri1.getMonth() || (todaydate.getMonth() === sri1.getMonth() && todaydate.getDate() < sri1.getDate()))
-       age--;
-      if (!(age > 18 && age < 55)) 
-      {
-           element.setCustomValidity("entered age must be in between 18 and 55");
-           element.reportValidity();
-      } 
-      else{
-      element.setCustomValidity("");
-      }
-}
+        function ganval3() 
+        {   let element = document.getElementById("dob");
+            const dob = document.getElementById("dob").value;
+            let sri1 = new Date(dob);
+            var todaydate = new Date();
+            var age = parseInt(todaydate.getFullYear()) - parseInt(sri1.getFullYear());
+            if (todaydate.getMonth() < sri1.getMonth() || (todaydate.getMonth() === sri1.getMonth() && todaydate.getDate() < sri1.getDate()))
+              age--;
+            if (!(age > 18 && age < 55)) 
+            {
+                element.setCustomValidity("entered age must be in between 18 and 55");
+                element.reportValidity();
+            } 
+            else{
+            element.setCustomValidity("");
+            }
+        }
